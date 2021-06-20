@@ -32,3 +32,6 @@ Route::get('/rx', [PageController::class, 'frx']);
 Route::resource('/mobil', (MobilController::class));
 
 Route::get('/contoh', [PageController::class, 'fcontoh']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

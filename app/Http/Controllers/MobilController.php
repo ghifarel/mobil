@@ -13,7 +13,9 @@ class MobilController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $data = product::all();
+
+        return view('dashboard', ["products" => $dataProduct]);
     }
 
     /**

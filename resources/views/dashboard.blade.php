@@ -11,20 +11,22 @@
             <a href="{{route('mobil.create')}}">Tambah Data Mobil</a>
             <table class="table table-bordered table-striped">
                 <tr>
-                    <th>Brand</th>
-                    <th>Harga</th>
-                    <th>Gambar</th>
+                    <th>Kode Produk</th>
+                    <th>Nama</th>
+                    <th>Deskripsi</th>
                     <th>AKSI</th>
                 </tr>
+                @foreach ( as )
                 <tr>
-                    <td>Lexus LM 350 4 Seater</td>
-                    <td>3.500.000.000</td>
-                    <td>lm350.png</td>
+                    <td>{{$product->kode_produk}}</td>
+                    <td>{{$product->nama}}</td>
+                    <td>{{$product->deskripsi}}</td>
                     <td>
                         <input type="button" value="Edit" class="btn btn-warning">
                         <input type="button" value="Delete" class="btn btn-danger">
                     </td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>
