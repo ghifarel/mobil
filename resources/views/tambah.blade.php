@@ -8,11 +8,11 @@
     <div class="card">
         <div class="card-body">
             <h3>Tambah Mobil</h3>
-            <form action="#" method="POST">
+            <form action="{{route('mobil.store')}}" method="POST">
                 <ul class="list-group">
-                    Brand <input type="text" name="brand" required>
-                    Harga <input type="text" name="harga" required>
-                    Gambar <input type="text" name="gambar" required>
+                    Kode Produk <input type="text" name="kode produk" required>
+                    Nama <input type="text" name="nama" required>
+                    Gambar <input type="text" name="desc" required>
                 </ul>
                 <hr>
                 <a href="{{route('mobil.index')}}" class="btn btn-primary">Kembali</a>

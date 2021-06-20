@@ -36,7 +36,13 @@ class MobilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        product::create([
+            "kode produk"   ->$request->KodeProduk,
+            "nama"          ->$request->Nama,
+            "deskripsi"     ->$request->desc,
+        ]);
+
+        return redirect()->route('mobil.index');
     }
 
     /**
